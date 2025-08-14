@@ -1,0 +1,546 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    opacity: 0.7;
+}
+
+/* Music Play Button */
+.music-play-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff6b8b, #ff8e53);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.music-play-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.music-play-btn i {
+    margin-right: 8px;
+}
+
+/* Adjust container background for better readability */
+.content {
+    background-color: rgba(255, 255, 255, 0.85); /* Lebih transparan */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5f5;
+    color: #5a3d3d;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Flower Decorations */
+.flower-decor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+.flower-decor .petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffb6c1;
+    border-radius: 50% 0 50% 50%;
+    transform-origin: center;
+}
+
+.flower-decor .center {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+}
+
+.top-left {
+    top: 50px;
+    left: 50px;
+}
+
+.top-left .petal:nth-child(1) {
+    top: 0;
+    left: 20px;
+    transform: rotate(0deg);
+}
+
+.top-left .petal:nth-child(2) {
+    top: 20px;
+    left: 40px;
+    transform: rotate(90deg);
+}
+
+.top-left .petal:nth-child(3) {
+    top: 40px;
+    left: 20px;
+    transform: rotate(180deg);
+}
+
+.top-left .petal:nth-child(4) {
+    top: 20px;
+    left: 0;
+    transform: rotate(270deg);
+}
+
+.top-right {
+    top: 50px;
+    right: 50px;
+}
+
+.top-right .petal:nth-child(1) {
+    top: 0;
+    left: 20px;
+    transform: rotate(0deg);
+    background-color: #ff9eb7;
+}
+
+.top-right .petal:nth-child(2) {
+    top: 20px;
+    left: 40px;
+    transform: rotate(90deg);
+    background-color: #ff9eb7;
+}
+
+.top-right .petal:nth-child(3) {
+    top: 40px;
+    left: 20px;
+    transform: rotate(180deg);
+    background-color: #ff9eb7;
+}
+
+.top-right .petal:nth-child(4) {
+    top: 20px;
+    left: 0;
+    transform: rotate(270deg);
+    background-color: #ff9eb7;
+}
+
+.bottom-left {
+    bottom: 50px;
+    left: 50px;
+}
+
+.bottom-left .petal:nth-child(1) {
+    top: 0;
+    left: 20px;
+    transform: rotate(0deg);
+    background-color: #f8c8dc;
+}
+
+.bottom-left .petal:nth-child(2) {
+    top: 20px;
+    left: 40px;
+    transform: rotate(90deg);
+    background-color: #f8c8dc;
+}
+
+.bottom-left .petal:nth-child(3) {
+    top: 40px;
+    left: 20px;
+    transform: rotate(180deg);
+    background-color: #f8c8dc;
+}
+
+.bottom-left .petal:nth-child(4) {
+    top: 20px;
+    left: 0;
+    transform: rotate(270deg);
+    background-color: #f8c8dc;
+}
+
+.bottom-right {
+    bottom: 50px;
+    right: 50px;
+}
+
+.bottom-right .petal:nth-child(1) {
+    top: 0;
+    left: 20px;
+    transform: rotate(0deg);
+    background-color: #ffb6c1;
+}
+
+.bottom-right .petal:nth-child(2) {
+    top: 20px;
+    left: 40px;
+    transform: rotate(90deg);
+    background-color: #ffb6c1;
+}
+
+.bottom-right .petal:nth-child(3) {
+    top: 40px;
+    left: 20px;
+    transform: rotate(180deg);
+    background-color: #ffb6c1;
+}
+
+.bottom-right .petal:nth-child(4) {
+    top: 20px;
+    left: 0;
+    transform: rotate(270deg);
+    background-color: #ffb6c1;
+}
+
+/* Floating Flowers */
+.floating-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffb6c1;
+    border-radius: 50% 0 50% 50%;
+    opacity: 0.6;
+    animation: float 10s linear infinite;
+}
+
+.floating-flower:nth-child(2n) {
+    background-color: #f8c8dc;
+    width: 15px;
+    height: 15px;
+}
+
+.floating-flower:nth-child(3n) {
+    background-color: #ff9eb7;
+    width: 25px;
+    height: 25px;
+}
+
+/* Enhanced Poem Styling */
+.glowing-title {
+    font-family: 'Dancing Script', cursive;
+    color: #d23669;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+    position: relative;
+    display: inline-block;
+}
+
+.heart-beat {
+    animation: heartbeat 1.5s ease infinite;
+    display: inline-block;
+}
+
+.poem-container {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.poem {
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    color: #5a3d3d;
+    position: relative;
+}
+
+.poem p {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+    text-align: left;   
+    opacity: 1 !important; /* Memastikan tetap terlihat */
+    animation-fill-mode: forwards; /* Mempertahankan state akhir animasi */
+}
+
+.flower-icon {
+    position: absolute;
+    left: 0;
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+.poem-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffb6c1, transparent);
+    margin: 1.5rem auto;
+    width: 50%;
+}
+
+.closing {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    color: #d23669;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(255, 105, 140, 0.9), 0 0 20px rgba(255, 182, 193, 0.6);
+    }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float-icon {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shimmer {
+    animation: shimmer 3s ease infinite;
+}
+
+@keyframes shimmer {
+    0% { color: #d23669; }
+    50% { color: #ff6b8b; }
+    100% { color: #d23669; }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Content Styles */
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #d23669;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.poem {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-style: italic;
+    color: #5a3d3d;
+}
+
+.closing {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: #d23669;
+    font-weight: 600;
+}
+
+/* Gift Button */
+.gift-btn {
+    background: linear-gradient(45deg, #ff6b8b, #ff8e53);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 105, 140, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.gift-btn i {
+    margin-right: 10px;
+}
+
+.gift-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 105, 140, 0.6);
+}
+
+.gift-btn:active {
+    transform: translateY(1px);
+}
+
+.gift-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+.gift-btn.clicked {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 105, 140, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 105, 140, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 105, 140, 0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .poem {
+        font-size: 1rem;
+    }
+    
+    .flower-decor {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .flower-decor .petal {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .flower-decor .center {
+        width: 8px;
+        height: 8px;
+        top: 16px;
+        left: 16px;
+    }
+    
+    .top-left, .top-right, .bottom-left, .bottom-right {
+        display: none;
+    }
+}

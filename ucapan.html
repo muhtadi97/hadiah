@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puisi Untuk Cici</title>
+    <link rel="stylesheet" href="ucapan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="background-image"></div>
+    
+    <!-- Audio Element (autoplay akan dihandle oleh JavaScript) -->
+    <audio id="bgMusic" loop>
+        <source src="audio/Yiruma, (이루마) - River Flows in You.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <div class="container">
+        <div class="flower-decor top-left">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        
+        <div class="flower-decor top-right">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        
+        <div class="content">
+            <h1 class="glowing-title">Untuk Kamu yang Hebat<span class="heart-beat">𐚁</span></h1>
+
+<div class="poem-container">
+    <div class="poem">
+    <p class="fade-in"><span class="flower-icon">🌸</span> Di antara beratnya hari ini,</p>
+    <p class="fade-in" style="animation-delay: 0.3s"><span class="flower-icon">🌧</span> Saat rintik masalah terasa deras,</p>
+    <p class="fade-in" style="animation-delay: 0.6s"><span class="flower-icon">🌺</span> Izinkan aku mengingatkanmu...</p>
+    <p class="fade-in" style="animation-delay: 0.9s"><span class="flower-icon">🌼</span> Bahwa kau bagai bunga di taman hidup,</p>
+    <p class="fade-in" style="animation-delay: 1.2s">Yang tetap anggun meski diterpa hujan.</p>
+    
+    <div class="poem-divider"></div>
+    
+    <p class="fade-in" style="animation-delay: 1.5s"><span class="flower-icon">💫</span> Lelah yang menggelayut di bahumu,</p>
+    <p class="fade-in" style="animation-delay: 1.8s"><span class="flower-icon">✨</span> Adalah tanda perjalananmu yang berharga.</p>
+    <p class="fade-in" style="animation-delay: 2.1s"><span class="flower-icon">🌙</span> Air mata yang sempat tumpah kemarin,</p>
+    <p class="fade-in" style="animation-delay: 2.4s">Kini jadi embun penyegar pagi hari.</p>
+    
+    <div class="poem-divider"></div>
+    
+    <p class="fade-in" style="animation-delay: 2.7s"><span class="flower-icon">🌤</span> Percayalah, setelah badai ini,</p>
+    <p class="fade-in" style="animation-delay: 3.0s"><span class="flower-icon">☕</span> Akan ada hangatnya senyum dan kopi,</p>
+    <p class="fade-in" style="animation-delay: 3.3s"><span class="flower-icon">🌻</span> Karena cahayamu itu alami,</p>
+    <p class="fade-in" style="animation-delay: 3.6s">Seperti matahari terbit yang tak pernah janji palsu.</p>
+</div>
+</div>
+
+<p class="closing shimmer">Semoga hari-harimu kembali cerah dan penuh senyuman...</p>
+            
+            <button class="gift-btn" id="giftBtn">
+                <i class="fas fa-gift"></i> Buka Hadiah Spesial
+            </button>
+        </div>
+        
+        <div class="flower-decor bottom-left">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        
+        <div class="flower-decor bottom-right">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        
+        <div class="floating-flowers">
+            <div class="floating-flower" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="floating-flower" style="left: 30%; animation-delay: 1s;"></div>
+            <div class="floating-flower" style="left: 50%; animation-delay: 2s;"></div>
+            <div class="floating-flower" style="left: 70%; animation-delay: 3s;"></div>
+            <div class="floating-flower" style="left: 90%; animation-delay: 4s;"></div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('giftBtn').addEventListener('click', function() {
+        // Tambahkan efek sebelum pindah halaman
+        this.classList.add('clicked');
+        setTimeout(function() {
+            window.location.href = 'flower.html';
+        }, 500); // Delay 0.5 detik sebelum pindah
+    });
+
+    // Memutar musik otomatis saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgMusic');
+            audio.volume = 0.3; // Atur volume menjadi 30%
+            
+            // Coba memutar audio (browser modern memblokir autoplay tanpa interaksi user)
+            audio.play().catch(error => {
+                console.log('Autoplay dicegah:', error);
+                // Tampilkan tombol play jika autoplay gagal
+                const playButton = document.createElement('button');
+                playButton.innerHTML = '<i class="fas fa-play"></i> Putar Musik';
+                playButton.className = 'music-play-btn';
+                playButton.onclick = function() {
+                    audio.play();
+                    this.remove();
+                    };
+                document.body.appendChild(playButton);
+                });
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Nama</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <div class="glass-card">
+            <div class="header">
+                <h1>Validasi Nama</h1>
+                <p>Masukkan nama kamu untuk melanjutkan</p>
+            </div>
+            
+            <form id="nameForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nameInput" placeholder="Masukkan nama kamu" required>
+                </div>
+                
+                <button type="submit" class="btn-login">Lanjutkan</button>
+                
+                <div id="message" class="message"></div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
