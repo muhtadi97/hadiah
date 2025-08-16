@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageDiv = document.getElementById('message');
     
     // Nama yang diizinkan (bisa disesuaikan)
-    const allowedNames = ['cici', 'Cici', 'CICI'];
+    const allowedNames = ['winny', 'Winny', 'WINNY'];
     
     nameForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = 'ucapan.html';
             } else {
                 // Jika nama salah, tampilkan pesan
-                showMessage('Hanya untuk kamu yang bernama Cici', 'error');
+                showMessage('Hanya untuk kamu yang bernama Winny', 'error');
                 nameInput.value = '';
                 nameInput.focus();
             }
