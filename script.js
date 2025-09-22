@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = 'ucapan.html';
             } else {
                 // Jika nama salah, tampilkan pesan
-                showMessage('Hanya untuk kamu yang bernama Nidya', 'error');
+                showMessage('Hanya Untuk Princess Nidya', 'error');
                 nameInput.value = '';
                 nameInput.focus();
             }
